@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:michael_magdy/helper/colors.dart';
 import 'package:michael_magdy/helper/line_chart_widget.dart';
 import 'package:michael_magdy/helper/sizes.dart';
@@ -171,12 +170,12 @@ Widget _firstTap(BuildContext context,TextEditingController search){
                     width: width(context)*0.9,
                     height: height(context)*0.40,
                     decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(const Radius.circular(40)),
+                        borderRadius: const BorderRadius.all( Radius.circular(40)),
                         border: Border.all(
                           color: colors.blue,
                         ),
                       image: const DecorationImage(
-                        image: const AssetImage('assets/images/face.jpg'),
+                        image: AssetImage('assets/images/face.jpg'),
                         fit: BoxFit.fill
                       )
                     ),

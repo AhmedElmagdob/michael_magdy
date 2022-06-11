@@ -67,6 +67,7 @@ class CustomTextField extends StatelessWidget {
         onChanged: onChange,
         obscureText: obscure,
         style:  const TextStyle(color: Colors.black),
+        cursorColor: colors.blue,
         decoration: InputDecoration(
             hintText: hint ?? "",
             hintStyle: hintStyle ??
@@ -76,8 +77,7 @@ class CustomTextField extends StatelessWidget {
                 ),
             labelText: label,
             labelStyle: const TextStyle(fontSize: 14, color: colors.blue),
-            contentPadding:
-            const EdgeInsets.only(top: 8, right: 8, left: 8),
+            contentPadding: const EdgeInsets.only(top: 8, right: 8, left: 8),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: const BorderSide(color:colors.blue),
@@ -94,17 +94,17 @@ class CustomTextField extends StatelessWidget {
             suffixIcon: iconWidget == null ? (
                 icon == null ? null
                 : InkWell(
-                onTap: iconPressed ?? () {},
-                child: Icon(
-                  icon,
-                  size: 18,
-                  color: colors.blue,
-                )))
+                  onTap: iconPressed ?? () {},
+                  child: Icon(
+                    icon,
+                    size: 18,
+                    color: colors.blue,
+                  )))
                 : Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                iconWidget!,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    iconWidget!,
               ],
             )),
         validator: validatorTextField,

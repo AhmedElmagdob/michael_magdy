@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dashboard/dashboard.dart';
+import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:provider/provider.dart';
 import 'helper/colors.dart';
+import 'helper/custom_stepper.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  runApp(const MyApp());
+  runApp(
+      MultiProvider(
+          providers: [
+            ListenableProvider<SelectedStepProvider>(create: (context) => SelectedStepProvider()),
+          ],
+          child: const MyApp()
+      )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -20,14 +29,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: colors.primary_app,
         tabBarTheme:  const TabBarTheme(
             labelColor: colors.white,
-            labelStyle: TextStyle(color: colors.blue,), // color for text
-            indicator: UnderlineTabIndicator( // color for indicator (underline)
-                borderSide: BorderSide(color: colors.orange))),
-          primaryColor: colors.white, // outdated and has no effect to Tabbar
-          accentColor: Colors.cyan[600] // deprecated,
+            labelStyle: TextStyle(color: colors.blue,),
+            indicator: UnderlineTabIndicator(
+                borderSide: BorderSide(color: colors.orange)
+            )
+        ),
+          primaryColor: colors.white,
+          accentColor: Colors.cyan[600]
       ),
       debugShowCheckedModeBanner: false,
-      home: const Dashboard(),
+      home:  const CustomStepper(),
     );
   }
 }

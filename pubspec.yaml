@@ -41,6 +41,8 @@ dependencies:
   percent_indicator: ^4.0.0
   linear_step_indicator: ^1.0.0+3
   flutter_svg: ^1.0.3
+  syncfusion_flutter_sliders: ^20.1.59
+  provider: ^6.0.1
 
 
 

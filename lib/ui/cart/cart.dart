@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:linear_step_indicator/linear_step_indicator.dart';
 import 'package:michael_magdy/helper/button.dart';
 import 'package:michael_magdy/helper/colors.dart';
@@ -23,7 +21,7 @@ class _CartState extends State<Cart> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback(
+    WidgetsBinding.instance.addPostFrameCallback(
           (timeStamp) {
       },
     );
@@ -104,11 +102,11 @@ class _CartState extends State<Cart> {
               ),
             ),
             Padding(
-                padding: EdgeInsets.only(left: 12,right: 12,top: 8,bottom: 5),
+                padding: const EdgeInsets.only(left: 12,right: 12,top: 8,bottom: 5),
               child: CustomTextField(hint: "text",label: "text",),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 12,right: 12,top: 5,bottom: 5),
+              padding: const EdgeInsets.only(left: 12,right: 12,top: 5,bottom: 5),
               child: CustomTextField(hint: "text",label: "text",),
             ),
             Padding(

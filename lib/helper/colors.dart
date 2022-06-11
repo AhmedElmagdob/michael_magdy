@@ -36,4 +36,9 @@ extension colors on ColorScheme{
   static const Color orange = Color(0xffFEB135);
   static const Color searchBar = Color(0xffe8e8e8);
   static const Color white = Color(0xffffffff);
+  static const Color darkBlue = Color(0xff0849A8);
+  static const Color red = Color(0xffFD5E5E);
+  static const Color darkOrange = Color(0xffFEB135);
+  static const Color grey = Color(0xffDDDBDB);
+  static const Color myGrey = Color(0xffCAD6E9);
 }

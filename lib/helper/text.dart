@@ -1,7 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 
 class Txt extends StatelessWidget {
@@ -25,7 +24,6 @@ class Txt extends StatelessWidget {
       text,
       // overflow: TextOverflow.visible,
       // softWrap: true,
-
       textAlign: textAlign,
       style: TextStyle(
           color: color,
