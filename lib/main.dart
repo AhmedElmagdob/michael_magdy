@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'dashboard/dashboard.dart';
 import 'helper/colors.dart';
-import 'helper/sizes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
