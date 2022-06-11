@@ -39,6 +39,10 @@ dependencies:
   syncfusion_flutter_charts: ^20.1.48
   fl_chart: ^0.50.6
   percent_indicator: ^4.0.0
+  linear_step_indicator: ^1.0.0+3
+  flutter_svg: ^1.0.3
+
+
 
 
 dev_dependencies:
@@ -66,6 +70,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/
+   - assets/icons/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

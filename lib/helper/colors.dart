@@ -32,6 +32,7 @@ extension colors on ColorScheme{
   );
   static const Color blue = Color(0xff497FCE);
   static const Color lightBlue = Color(0xc878a2dc);
+  static const Color black = Color(0xff000000);
   static const Color orange = Color(0xffFEB135);
   static const Color searchBar = Color(0xffe8e8e8);
   static const Color white = Color(0xffffffff);

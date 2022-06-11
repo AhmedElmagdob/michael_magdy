@@ -1,12 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:michael_magdy/ui/cart/cart.dart';
+import 'package:michael_magdy/ui/home/home.dart';
 import '../helper/bottom.dart';
 import '../helper/colors.dart';
 import '../helper/curvedNavBar.dart';
 import '../helper/curves_action.dart';
 import '../helper/text.dart';
-import '../home/home.dart';
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
 
@@ -29,11 +31,11 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
     );
     _scaleAnimation = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 2000),
+      duration: const Duration(milliseconds: 2000),
     );
     _tabController.addListener(
           () {
-        Future.delayed(Duration(seconds: 0)).then(
+        Future.delayed(const Duration(seconds: 0)).then(
               (value) {},
         );
 
@@ -80,13 +82,15 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                     backgroundColor: colors.orange,
                     child: Column(
                       children: [
-                        SizedBox(height: 8,),
-                        Icon(
-                          Icons.person,
-                          color: colors.white,
-                          size: 30,
+                        const SizedBox(height: 8,),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 4.0),
+                          child: SvgPicture.asset(
+                            "assets/icons/person.svg",
+                            height: 35,
+                          ),
                         ),
-                        Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                        const Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
                       ],
                     ),
                   ),
@@ -95,16 +99,18 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                   width: 70,
                   height: 60,
                   decoration:
-                  BoxDecoration(color: colors.blue, shape: BoxShape.circle),
+                  const BoxDecoration(color: colors.blue, shape: BoxShape.circle),
                   child: Column(
                     children: [
-                      SizedBox(height: 8,),
-                      Icon(
-                        Icons.person,
-                        color: colors.white,
-                        size: 32,
+                      const SizedBox(height: 8,),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 4.0),
+                        child: SvgPicture.asset(
+                          "assets/icons/person.svg",
+                          height: 35,
+                        ),
                       ),
-                      Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                      const Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
                     ],
                   ),
                 ),
@@ -119,25 +125,23 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                     backgroundColor: colors.orange,
                     child: Column(
                       children: [
-                        SizedBox(height: 8,),
-                        Icon(
-                          Icons.home_outlined,
-                          color: colors.white,
-                          size: 32,
+                        const SizedBox(height: 8,),
+                        SvgPicture.asset(
+                          "assets/icons/home.svg",
+                          height: 30,
                         ),
-                        Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                        const Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
                       ],
                     ),
                   ),
                   inActiveIcon: Column(
                     children: [
-                      SizedBox(height: 8,),
-                      Icon(
-                        Icons.home_outlined,
-                        color: colors.white,
-                        size: 32,
+                      const SizedBox(height: 8,),
+                      SvgPicture.asset(
+                        "assets/icons/home.svg",
+                        height: 30,
                       ),
-                      Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                      const Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
                     ],
                   ),
               ),
@@ -147,25 +151,23 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                     backgroundColor: colors.orange,
                     child: Column(
                       children: [
-                        SizedBox(height: 8,),
-                        Icon(
-                          Icons.text_snippet_outlined,
-                          color: colors.white,
-                          size: 30,
+                        const SizedBox(height: 8,),
+                        SvgPicture.asset(
+                          "assets/icons/Sell.svg",
+                          height: 30,
                         ),
-                        Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                        const Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
                       ],
                     ),
                   ),
                   inActiveIcon: Column(
                     children: [
-                      SizedBox(height: 8,),
-                      Icon(
-                        Icons.text_snippet_outlined,
-                        color: colors.white,
-                        size: 30,
+                      const SizedBox(height: 8,),
+                      SvgPicture.asset(
+                        "assets/icons/Sell.svg",
+                        height: 30,
                       ),
-                      Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                      const Txt("Home",color: colors.white,size: 12 ,weight: FontWeight.bold),
                     ],
                   ),
               ),
@@ -175,25 +177,23 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                     backgroundColor: colors.orange,
                     child: Column(
                       children: [
-                        SizedBox(height: 8,),
-                        Icon(
-                          Icons.clean_hands_outlined,
-                          color: colors.white,
-                          size: 30,
+                        const SizedBox(height: 8,),
+                        SvgPicture.asset(
+                          "assets/icons/3.svg",
+                          height: 35,
                         ),
-                        Txt("text",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                        const Txt("text",color: colors.white,size: 12 ,weight: FontWeight.bold),
                       ],
                     ),
                   ),
                   inActiveIcon: Column(
                     children: [
-                      SizedBox(height: 8,),
-                      Icon(
-                          Icons.clean_hands_outlined,
-                        color: colors.white,
-                        size: 30,
-                      ),
-                      Txt("text",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                      const SizedBox(height: 8,),
+                  SvgPicture.asset(
+                      "assets/icons/3.svg",
+                    height: 35,
+                  ),
+                      const Txt("text",color: colors.white,size: 12 ,weight: FontWeight.bold),
                     ],
                   ),
               ),
@@ -203,25 +203,23 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                     backgroundColor: colors.orange,
                     child: Column(
                       children: [
-                        SizedBox(height: 8,),
-                        Icon(
-                          Icons.notifications_none_rounded,
-                          color: colors.white,
-                          size: 30,
+                        const SizedBox(height: 8,),
+                        SvgPicture.asset(
+                          "assets/icons/notification.svg",
+                          height: 32,
                         ),
-                        Txt("notification",color: colors.white,size: 10 ,weight: FontWeight.bold),
+                        const Txt("notification",color: colors.white,size: 10 ,weight: FontWeight.bold),
                       ],
                     ),
                   ),
                   inActiveIcon: Column(
                     children: [
-                      SizedBox(height: 8,),
-                      Icon(
-                          Icons.notifications_none_rounded,
-                        color: colors.white,
-                        size: 30,
+                      const SizedBox(height: 8,),
+                      SvgPicture.asset(
+                        "assets/icons/notification.svg",
+                        height: 32,
                       ),
-                      Txt("notification",color: colors.white,size: 12 ,weight: FontWeight.bold),
+                      const Txt("notification",color: colors.white,size: 10 ,weight: FontWeight.bold),
                     ],
                   ),
               ),
@@ -232,10 +230,7 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                 height: MediaQuery.of(context).size.height,
                 color: Colors.blue,
               ),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                color: Colors.pinkAccent,
-              ),
+              const Cart(),
               Container(
                 height: MediaQuery.of(context).size.height,
                 color: Colors.blue,
