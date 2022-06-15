@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:provider/provider.dart';
 
-import '../../../helper/button.dart';
-import '../../../helper/colors.dart';
-import '../../../helper/custom_text_field.dart';
-import '../../../helper/space_widget.dart';
-import '../../../helper/text.dart';
+import '../../helper/button.dart';
+import '../../helper/colors.dart';
+import '../../helper/custom_text_field.dart';
+import '../../helper/space_widget.dart';
+import '../../helper/text.dart';
 
 class StepThreeOne extends StatefulWidget{
   StepThreeOne({Key? key}) : super(key: key);
@@ -18,7 +20,7 @@ class _StepThreeOneState extends State<StepThreeOne> {
 
   @override
   Widget build(BuildContext context) {
-
+    final ref = Provider.of<SelectedStepProvider>(context);
 
     return SafeArea(
       child: Scaffold(
@@ -98,7 +100,8 @@ class _StepThreeOneState extends State<StepThreeOne> {
                       color: colors.white,
                       weight: FontWeight.bold,
                     ),
-                    function: () {  },
+                    function: () { ref.onTappedAdd2();
+                    ref.onTap2(); },
                   ),
                 ),
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:michael_magdy/dashboard/dashboard.dart';
 import 'package:michael_magdy/ui/cart/provider.dart';
 import 'package:provider/provider.dart';
 import 'helper/colors.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.cyan[600]
       ),
       debugShowCheckedModeBanner: false,
-      home:  const CustomStepper(),
+      home:  const Dashboard(),
     );
   }
 }

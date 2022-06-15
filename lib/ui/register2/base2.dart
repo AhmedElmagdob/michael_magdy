@@ -4,26 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:michael_magdy/helper/colors.dart';
 import 'package:michael_magdy/helper/custom_stepper.dart';
+import 'package:michael_magdy/helper/custom_stepper2.dart';
 import 'package:michael_magdy/helper/space_widget.dart';
 import 'package:michael_magdy/helper/text.dart';
+import 'package:michael_magdy/ui/cart/cart_stepper/business_valuation.dart';
 import 'package:michael_magdy/ui/cart/cart_stepper/first.dart';
 import 'package:michael_magdy/ui/cart/cart_stepper/second.dart';
 import 'package:michael_magdy/ui/cart/cart_stepper/step_six.dart';
 import 'package:michael_magdy/ui/cart/cart_stepper/third_step.dart';
 import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:michael_magdy/ui/register2/business_valuation_one.dart';
 import 'package:michael_magdy/ui/register2/s1.dart';
+import 'package:michael_magdy/ui/register2/s2.dart';
+import 'package:michael_magdy/ui/register2/step_three_one.dart';
 import 'package:provider/provider.dart';
 
-import 'cart_stepper/business_valuation.dart';
 
-class Cart extends StatefulWidget {
-  const Cart({Key? key}) : super(key: key);
+class Base2 extends StatefulWidget {
+  const Base2({Key? key}) : super(key: key);
 
   @override
-  State<Cart> createState() => _CartState();
+  State<Base2> createState() => _Base2State();
 }
 
-class _CartState extends State<Cart> {
+class _Base2State extends State<Base2> {
   List<String> dropDown1 = ['الرجاء اختيار الدوله اولا'];
 
   @override
@@ -75,28 +79,28 @@ class _CartState extends State<Cart> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CustomStepper(),
+              CustomStepper2(),
               Padding(
                 padding: EdgeInsets.only(top: 12),
                 child: Center(
                     child: Txt(
-                  "HeadLine",
-                  color: colors.black,
-                  weight: FontWeight.bold,
-                  size: 25,
-                )),
+                      "HeadLine",
+                      color: colors.black,
+                      weight: FontWeight.bold,
+                      size: 25,
+                    )),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height*0.9,
                 child: PageView(
-                  controller: ref.pageController,
+                  controller: ref.pageController2,
                   physics: NeverScrollableScrollPhysics(),
-                  children: const [
-                    R1S1(),
-                    AboutStartup(),
-                    ThirdStep(),
-                    ThirdStep(),
-                    BusinessValuation(),
+                  children: [
+                    R2S1(),
+                    Step2(),
+                    StepThreeOne(),
+                    StepThreeOne(),
+                    BusinessValuationOne(),
                     StepSix(),
                   ],
                 ),

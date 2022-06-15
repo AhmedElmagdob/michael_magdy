@@ -19,12 +19,7 @@ class CustomStepperState extends State<CustomStepper>{
   @override
   Widget build(BuildContext context) {
     final ref = Provider.of<SelectedStepProvider>(context);
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            const SizedBox(height: 10),
-            SizedBox(
+    return  SizedBox(
               height: 85,
               child: Center(
                 child: ListView.builder(
@@ -87,27 +82,7 @@ class CustomStepperState extends State<CustomStepper>{
                     }
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 8,left: 8),
-              child: LBottom(
-                title: const Txt(
-                  "Text",
-                  color: colors.white,
-                  weight: FontWeight.bold,
-                ),
-                function: () {
-                  ref.selectedStep > 5 ?
-                  ref.onTappedRemove():
-                  ref.onTappedAdd();
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-
+            );
   }
   
 }

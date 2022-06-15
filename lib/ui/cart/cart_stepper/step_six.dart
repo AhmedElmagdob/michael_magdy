@@ -535,7 +535,7 @@ class _StepSixState extends State<StepSix> {
                     function: () {  },
                   ),
                 ),
-
+                const VerticalSpace(160),
               ],
             ),
           ),

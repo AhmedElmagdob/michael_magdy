@@ -3,8 +3,10 @@ import 'package:michael_magdy/helper/button.dart';
 import 'package:michael_magdy/helper/custom_text_field.dart';
 import 'package:michael_magdy/helper/space_widget.dart';
 import 'package:michael_magdy/helper/text.dart';
+import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
-import '../../../helper/colors.dart';
+import '../../helper/colors.dart';
 
 class BusinessValuationOne extends StatefulWidget{
   const BusinessValuationOne({Key? key}) : super(key: key);
@@ -17,6 +19,7 @@ class _BusinessValuationOneState extends State<BusinessValuationOne> {
   double _value = 40.0;
   @override
   Widget build(BuildContext context) {
+    final ref = Provider.of<SelectedStepProvider>(context);
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -172,7 +175,8 @@ class _BusinessValuationOneState extends State<BusinessValuationOne> {
                   color: colors.white,
                   weight: FontWeight.bold,
                 ),
-                function: () {  },
+                function: () { ref.onTappedAdd2();
+                ref.onTap2();  },
               ),
 
             ],

@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:michael_magdy/ui/cart/cart.dart';
 import 'package:michael_magdy/ui/home/home.dart';
+import 'package:michael_magdy/ui/register2/base2.dart';
 import '../helper/bottom.dart';
 import '../helper/colors.dart';
 import '../helper/curvedNavBar.dart';
@@ -226,10 +227,7 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
             ],
             bodyItems: [
               Home(),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                color: Colors.blue,
-              ),
+              Base2(),
               const Cart(),
               Container(
                 height: MediaQuery.of(context).size.height,

@@ -26,6 +26,7 @@ class CustomTextField extends StatelessWidget {
   int? minLines;
   int? maxLength;
   FormFieldValidator<String>? validatorTextField;
+  TextAlignVertical? textAlignVertical;
 
   CustomTextField(
       {this.controller,
@@ -50,6 +51,7 @@ class CustomTextField extends StatelessWidget {
         this.maxLength,
         this.onChange,
         this.validatorTextField,
+        this.textAlignVertical,
       });
 
   @override
@@ -61,6 +63,8 @@ class CustomTextField extends StatelessWidget {
         maxLines: maxLines ?? 1,
         maxLength: maxLength,
         enabled: enabled,
+
+        textAlignVertical: textAlignVertical,
         keyboardType: textType ?? TextInputType.text,
         controller: controller,
         focusNode: focusNode,
@@ -69,6 +73,7 @@ class CustomTextField extends StatelessWidget {
         style:  const TextStyle(color: Colors.black),
         cursorColor: colors.blue,
         decoration: InputDecoration(
+            alignLabelWithHint: true,
             hintText: hint ?? "",
             hintStyle: hintStyle ??
                 const TextStyle(

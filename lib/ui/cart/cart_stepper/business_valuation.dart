@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:michael_magdy/helper/button.dart';
 import 'package:michael_magdy/helper/space_widget.dart';
 import 'package:michael_magdy/helper/text.dart';
+import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:provider/provider.dart';
 
 import '../../../helper/colors.dart';
 
@@ -11,7 +13,7 @@ class BusinessValuation extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-
+    final ref = Provider.of<SelectedStepProvider>(context);
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -244,7 +246,8 @@ class BusinessValuation extends StatelessWidget{
                 color: colors.white,
                 weight: FontWeight.bold,
                ),
-                function: () {  },
+                function: () { ref.onTappedAdd();
+                ref.onTap(); },
               ),
             ),
 
