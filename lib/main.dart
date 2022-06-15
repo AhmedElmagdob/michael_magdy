@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:michael_magdy/dashboard/dashboard.dart';
-import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:michael_magdy/ui/register1/provider.dart';
 import 'package:provider/provider.dart';
 import 'helper/colors.dart';
 import 'helper/custom_stepper.dart';

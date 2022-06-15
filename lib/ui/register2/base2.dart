@@ -7,12 +7,9 @@ import 'package:michael_magdy/helper/custom_stepper.dart';
 import 'package:michael_magdy/helper/custom_stepper2.dart';
 import 'package:michael_magdy/helper/space_widget.dart';
 import 'package:michael_magdy/helper/text.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/business_valuation.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/first.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/second.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/step_six.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/third_step.dart';
-import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:michael_magdy/ui/register1/provider.dart';
+import 'package:michael_magdy/ui/register1/register_stepper/step_six.dart';
+
 import 'package:michael_magdy/ui/register2/business_valuation_one.dart';
 import 'package:michael_magdy/ui/register2/s1.dart';
 import 'package:michael_magdy/ui/register2/s2.dart';

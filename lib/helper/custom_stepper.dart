@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:michael_magdy/helper/text.dart';
-import 'package:michael_magdy/ui/cart/provider.dart';
+import 'package:michael_magdy/ui/register1/provider.dart';
+
 import 'package:provider/provider.dart';
 import 'button.dart';
 import 'colors.dart';

@@ -6,15 +6,14 @@ import 'package:michael_magdy/helper/colors.dart';
 import 'package:michael_magdy/helper/custom_stepper.dart';
 import 'package:michael_magdy/helper/space_widget.dart';
 import 'package:michael_magdy/helper/text.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/first.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/second.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/step_six.dart';
-import 'package:michael_magdy/ui/cart/cart_stepper/third_step.dart';
-import 'package:michael_magdy/ui/cart/provider.dart';
-import 'package:michael_magdy/ui/register2/s1.dart';
-import 'package:provider/provider.dart';
+import 'package:michael_magdy/ui/register1/provider.dart';
+import 'package:michael_magdy/ui/register1/register_stepper/first.dart';
+import 'package:michael_magdy/ui/register1/register_stepper/second.dart';
+import 'package:michael_magdy/ui/register1/register_stepper/step_six.dart';
+import 'package:michael_magdy/ui/register1/register_stepper/third_step.dart';
 
-import 'cart_stepper/business_valuation.dart';
+import 'package:provider/provider.dart';
+import 'register_stepper/business_valuation.dart';
 
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);

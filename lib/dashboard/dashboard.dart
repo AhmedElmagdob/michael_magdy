@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:michael_magdy/ui/cart/cart.dart';
+import 'package:michael_magdy/ui/register1/cart.dart';
 import 'package:michael_magdy/ui/home/home.dart';
 import 'package:michael_magdy/ui/register2/base2.dart';
 import '../helper/bottom.dart';

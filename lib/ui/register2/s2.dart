@@ -6,7 +6,7 @@ import 'package:michael_magdy/helper/space_widget.dart';
 import 'package:michael_magdy/helper/text.dart';
 import 'package:provider/provider.dart';
 
-import '../cart/provider.dart';
+import '../register1/provider.dart';
 class Step2 extends StatelessWidget {
   const Step2({Key? key}) : super(key: key);
 
